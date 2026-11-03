@@ -1,0 +1,108 @@
+.gallery-section {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    height: 220px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+.gallery-overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    font-weight: bold;
+}
+
+.gallery-item:hover .gallery-overlay {
+    opacity: 1;
+}
+
+/* Lightbox Modal */
+.lightbox-modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.85);
+    text-align: center;
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+.lightbox-modal img {
+    max-width: 90%;
+    max-height: 80vh;
+    margin-top: 40px;
+    border-radius: 6px;
+}
+
+.lightbox-modal p {
+    color: white;
+    margin-top: 15px;
+    font-size: 1.1rem;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 20px; right: 30px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+<section class="gallery-section">
+    <h2>Our Farm & Harvest Gallery</h2>
+    <div class="gallery-grid">
+        <div class="gallery-item" onclick="openLightbox('images/farm-1.jpg', 'Fresh organic tomatoes growing in our greenhouse')">
+            <img src="images/farm-1.jpg" alt="Organic Tomatoes" loading="lazy">
+            <div class="gallery-overlay"><span>🔍 View</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/farm-2.jpg', 'Harvesting fresh leafy greens')">
+            <img src="images/farm-2.jpg" alt="Harvesting Greens" loading="lazy">
+            <div class="gallery-overlay"><span>🔍 View</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/farm-3.jpg', 'Our local farmers market stall')">
+            <img src="images/farm-3.jpg" alt="Market Stall" loading="lazy">
+            <div class="gallery-overlay"><span>🔍 View</span></div>
+        </div>
+    </div>
+</section>
+
+
+<div id="gallery-lightbox" class="lightbox-modal" onclick="closeLightbox()">
+    <span class="lightbox-close">&times;</span>
+    <img id="lightbox-img" src="" alt="Enlarged view">
+    <p id="lightbox-caption"></p>
+</div>

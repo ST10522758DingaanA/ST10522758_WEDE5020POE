@@ -1,0 +1,15 @@
+# Allow all standard search engine crawlers
+
+User-agent: *
+
+Allow: /
+
+# Disable search engines from indexing private pages of the users
+
+Disallow: /cart.html
+
+Disallow: /checkout.html
+
+# Point search engines to your XML Sitemap
+
+Sitemap: https://www.ecoharvest.co.za/sitemap.xml

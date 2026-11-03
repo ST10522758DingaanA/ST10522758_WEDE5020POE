@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    <title>EcoHarvest Organic Farm & Market | Fresh Produce & Sustainable Goods</title>
+    <meta name="description" content="Shop fresh, pesticide-free organic produce, weekly harvest baskets, and farm tours at EcoHarvest in Centurion West, South Africa.">
+    <meta name="keywords" content="organic farm, fresh produce, weekly baskets, eco-friendly market, Centurion, EcoHarvest">
+    <link rel="canonical" href="https://www.ecoharvest.co.za/">
+
+    
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="EcoHarvest Organic Farm & Market">
+    <meta property="og:description" content="Fresh, pesticide-free produce from farm to table. Order online today!">
+    <meta property="og:image" content="https://www.ecoharvest.co.za/farm.jpeg">
+
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; background-color: #f4f8f2; }
+        header { background-color: #2e7d32; color: white; text-align: center; padding: 30px 20px; }
+        nav { background-color: #1b5e20; display: flex; justify-content: center; flex-wrap: wrap; padding: 15px; }
+        nav a { color: white; text-decoration: none; margin: 5px 15px; font-weight: bold; }
+        nav a:hover { color: #c8e6c9; }
+        .banner { background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("farm.jpg") center/cover; color: white; text-align: center; padding: 100px 20px; }
+        .banner h2 { font-size: 40px; margin-bottom: 15px; }
+        .banner p { font-size: 20px; margin-bottom: 25px; }
+        .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; padding: 50px 10%; text-align: center; }
+        .card { background-color: white; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.1); padding-bottom: 20px; }
+        .card img { width: 100%; height: 200px; object-fit: cover; }
+        .card h3 { color: #2e7d32; margin: 15px 10px 10px; }
+        .card p { padding: 0 15px; }
+        .contact-section { background: white; padding: 40px 20px; text-align: center; margin: 0 10% 50px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
+        .contact-section h2 { color: #2e7d32; margin-bottom: 15px; }
+        .contact-section p { margin: 8px 0; }
+        .contact-section a { color: #2e7d32; text-decoration: none; font-weight: bold; }
+        .contact-section a:hover { text-decoration: underline; }
+        footer { background-color: #1b5e20; color: white; text-align: center; padding: 20px; margin-top: 50px; }
+        @media (max-width: 768px) { .grid { grid-template-columns: 1fr; } nav { flex-direction: column; } }
+    </style>
+</head>
+<body>
+    <header> 
+        <h1>EcoHarvest Organic Farm & Market</h1>
+        <p>Fresh, pesticide-free produce from farm to table</p>
+    </header>
+
+    <nav>
+        <a href="index2.html" class="active">Home</a>
+        <a href="Ourfarm.html">Our Farm</a>
+        <a href="Produceshop.html">Produce Shop</a>
+        <a href="Baskets.html">Weekly Baskets</a>
+        <a href="Tours.html">Farm Tours</a>
+        <a href="Information.html">Customer info</a>
+        <a href="Contact.html">Contact Us</a>
+        <a href="cart.html">🛒 Cart (<span id="cart-count">0</span>)</a>
+    </nav>
+
+    <div class="banner" id="home">
+        <h2>Welcome to EcoHarvest</h2>
+        <p>Bringing fresh, organic produce to your doorstep.</p>
+    </div>
+
+    <section>
+        <div class="grid">
+            <div class="card">
+                <img src="farm.jpeg" alt="Our farm and pesticide-free farming methods at EcoHarvest">
+                <h3>Our Farm & Methods</h3>
+                <p>Fresh, pesticide-free farming since 2019.</p>
+            </div>
+
+            <div class="card">
+                <img src="basket.jpeg" alt="Weekly organic harvest produce basket">
+                <h3>Weekly Baskets</h3>
+                <p>Get a fresh harvest delivered weekly.</p>
+            </div>
+
+            <div class="card">
+                <img src="tour.jpeg" alt="Visitors enjoying farm tours and educational workshops">
+                <h3>Farm Tours & Workshops</h3>
+                <p>Join us for our immersive tours and educational events.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+        <h2>Contact Us</h2>
+        <p>Email: <a href="mailto:info@ecoharvest.co.za">info@ecoharvest.co.za</a></p>
+        <p>Phone: <a href="tel:+27791486339">+27 791 486 339</a></p>
+        <p>Location: Centurion West, 0157, South Africa</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 EcoHarvest Organic Farm & Market | Designed by Agobokoe Dingaan</p>
+    </footer>
+
+    <!-- Cart Count Script Sync -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const cartCountSpan = document.getElementById('cart-count');
+            const cart = JSON.parse(localStorage.getItem('ecoHarvestCart')) || [];
+            if (cartCountSpan) {
+                cartCountSpan.innerText = cart.length;
+            }
+        });
+    </script>
+</body>
+</html>

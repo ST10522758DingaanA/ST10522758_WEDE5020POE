@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoHarvest - Checkout</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header> 
+        <h1>EcoHarvest Organic Farm & Market</h1>
+        <p>Fresh, pesticide-free produce from farm to table</p>
+    </header>
+
+    <nav>
+        <a href="index2.html">Home</a>
+        <a href="Ourfarm.html">Our Farm</a>
+        <a href="Produceshop.html">Produce Shop</a>
+        <a href="Baskets.html">Weekly Baskets</a>
+        <a href="Tours.html">Farm Tours</a>
+        <a href="Information.html">Customer info</a>
+        <a href="Contact.html">Contact Us</a>
+        <a href="cart.html" style="color: #c8e6c9;">🛒 Cart (<span id="cart-count">0</span>)</a>
+    </nav>
+
+    <main style="padding: 40px 10%; max-width: 600px; margin: 0 auto;">
+        <div style="background: white; padding: 30px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+            <h2 style="color: #2e7d32; margin-bottom: 20px; text-align: center;">Checkout & Delivery</h2>
+            
+            <form id="checkout-form" style="display: flex; flex-direction: column; gap: 15px;">
+                <label style="font-weight: bold;">Full Name:
+                    <input type="text" required style="width: 100%; padding: 10px; margin-top: 5px; border: 1px solid #ccc; border-radius: 4px;">
+                </label>
+                
+                <label style="font-weight: bold;">Cellphone Number:
+                    <input type="text" required style="width: 100%; padding: 10px; margin-top: 5px; border: 1px solid #ccc; border-radius: 4px;">
+                </label>
+                
+                <label style="font-weight: bold;">Delivery Address:
+                    <textarea rows="3" required style="width: 100%; padding: 10px; margin-top: 5px; border: 1px solid #ccc; border-radius: 4px;"></textarea>
+                </label>
+
+                <label style="font-weight: bold;">Payment Method:
+                    <select style="width: 100%; padding: 10px; margin-top: 5px; border: 1px solid #ccc; border-radius: 4px;">
+                        <option>EFT (Bank Transfer)</option>
+                        <option>Cash on Delivery</option>
+                        <option>Credit / Debit Card (Simulated)</option>
+                    </select>
+                </label>
+
+                <button type="submit" style="background-color: #2e7d32; color: white; border: none; padding: 12px; border-radius: 5px; font-weight: bold; cursor: pointer; margin-top: 10px;">Place Order</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 EcoHarvest Organic Farm & Market | Designed by Agobokoe Dingaan</p>
+    </footer>
+
+    <script>
+    
+        document.getElementById('checkout-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Order placed successfully! Thank you for shopping with EcoHarvest.');
+            localStorage.removeItem('ecoHarvestCart'); 
+            window.location.href = 'index2.html'; 
+        });
+    </script>
+</body>
+</html>

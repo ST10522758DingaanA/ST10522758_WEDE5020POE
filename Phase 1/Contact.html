@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoHarvest Organic Farm & Market - Contact Us</title>
+    
+        <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; background-color: #f4f8f2; }
+        header { background-color: #2e7d32; color: white; text-align: center; padding: 30px 20px; }
+        nav { background-color: #1b5e20; display: flex; justify-content: center; flex-wrap: wrap; padding: 15px; }
+        nav a { color: white; text-decoration: none; margin: 5px 15px; font-weight: bold; }
+        nav a:hover { color: #c8e6c9; }
+        .banner { background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("farm.jpg") center/cover; color: white; text-align: center; padding: 100px 20px; }
+        .banner h2 { font-size: 40px; margin-bottom: 15px; }
+        .banner p { font-size: 20px; margin-bottom: 25px; }
+        .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; padding: 50px 10%; text-align: center; }
+        .card { background-color: white; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.1); padding-bottom: 20px; }
+        .card img { width: 100%; height: 200px; object-fit: cover; }
+        .card h3 { color: #2e7d32; margin: 15px 10px 10px; }
+        .card p { padding: 0 15px; }
+        footer { background-color: #1b5e20; color: white; text-align: center; padding: 20px; margin-top: 50px; }
+        @media (max-width: 768px) { .grid { grid-template-columns: 1fr; } nav { flex-direction: column; } }
+    </style>
+</head>
+<body>
+    <header> 
+        <h1>EcoHarvest Organic Farm & Market</h1>
+        <p>Fresh, pesticide-free produce from farm to table</p>
+    </header>
+
+    <nav>
+        <a href="index2.html">Home</a>
+        <a href="Ourfarm.html">Our Farm</a>
+        <a href="Produceshop.html">Produce Shop</a>
+        <a href="Baskets.html">Weekly Baskets</a>
+        <a href="Tours.html">Farm Tours</a>
+        <a href="Information.html">Customer info</a>
+        <a href="Contact.html" class="active">Contact Us</a>
+        <a href="cart.html">🛒 Cart (<span id="cart-count">0</span>)</a>
+    </nav>
+
+    <main>
+        <section class="content-section" style="margin-top: 50px; max-width: 600px;">
+            <h2 style=" text-align: center; color: #1b5e20;">Contact us </h2>
+            <p>In case you have questions about our baskets, tours, or organic farm techniques and employement? Dont be a stranger Send us a message!</p>
+            <br>
+            <form style="display: flex; flex-direction: column; gap: 15px;">
+                <label>Your Name: <input type="text" style="width: 100%; padding: 8px; margin-top: 5px; border: 1px solid #ccc; border-radius: 4px;"></label>
+                <label>Email Address: <input type="email" style="width: 100%; padding: 8px; margin-top: 5px; border: 1px solid #ccc; border-radius: 4px;"></label>
+                <label>Message: <textarea rows="5" style="width: 100%; padding: 8px; margin-top: 5px; border: 1px solid #ccc; border-radius: 4px;"></textarea></label>
+                <button type="submit" style="background-color: #2e7d32; color: white; padding: 10px; border: none; border-radius: 4px; font-weight: bold; cursor: pointer;">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 EcoHarvest Organic Farm & Market | Designed by Agobokoe Dingaan</p>
+    </footer>
+</body>
+</html>

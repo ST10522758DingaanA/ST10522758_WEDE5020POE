@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoHarvest Organic Farm & Market - Farm Tours</title>
+     <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; background-color: #f4f8f2; }
+        header { background-color: #2e7d32; color: white; text-align: center; padding: 30px 20px; }
+        nav { background-color: #1b5e20; display: flex; justify-content: center; flex-wrap: wrap; padding: 15px; }
+        nav a { color: white; text-decoration: none; margin: 5px 15px; font-weight: bold; }
+        nav a:hover { color: #c8e6c9; }
+        .banner { background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("farm.jpg") center/cover; color: white; text-align: center; padding: 100px 20px; }
+        .banner h2 { font-size: 40px; margin-bottom: 15px; }
+        .banner p { font-size: 20px; margin-bottom: 25px; }
+        .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; padding: 50px 10%; text-align: center; }
+        .card { background-color: white; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.1); padding-bottom: 20px; }
+        .card img { width: 100%; height: 200px; object-fit: cover; }
+        .card h3 { color: #2e7d32; margin: 15px 10px 10px; }
+        .card p { padding: 0 15px; }
+        footer { background-color: #1b5e20; color: white; text-align: center; padding: 20px; margin-top: 50px; }
+        .tour-card {padding:20px;  }
+        @media (max-width: 768px) { .grid { grid-template-columns: 1fr; } nav { flex-direction: column; } }
+    </style>
+      <script src="javascript.js" defer></script>
+</head>
+<body>
+    <header> 
+        <h1>EcoHarvest Organic Farm & Market</h1>
+        <p>Fresh, pesticide-free produce from farm to table</p>
+    </header>
+
+    <nav>
+        <a href="index2.html">Home</a>
+        <a href="Ourfarm.html">Our Farm</a>
+        <a href="Produceshop.html">Produce Shop</a>
+        <a href="Baskets.html">Weekly Baskets</a>
+        <a href="Tours.html" class="active">Farm Tours</a>
+        <a href="Information.html">Customer info</a>
+        <a href="Contact.html">Contact Us</a>
+        <a href="cart.html">🛒 Cart (<span id="cart-count">0</span>)</a>
+    </nav>
+
+    <main>
+        <section class="content-section" style="margin-top: 50px;">
+            <h2>Farm Tours & Educational Workshops</h2>
+            <p>Come see where your food comes from! We offer guided weekend tours through our crop fields, greenhouses, and animal enclosures, perfect for families and nature enthusiasts.</p>
+            <br>   
+        </section>
+
+
+    <section class="tours-section">
+  <h2 style=" text-align: center; color: #1b5e20;"><u>Farm Tours</u></h2>
+  <div class="tours-grid">
+    
+    <div class="tour-card">
+      <h3><u>Family Discovery Tour</u></h3>
+      <ul>
+        <li>Adults: Guided walk, tasting produce</li>
+        <li>Children: tractor ride</li>
+      </ul>
+      <p style="font-weight:bold";class="price">R280 per adult | R180 per child</p>
+      <ul>
+      <img src="tasting.jpeg">
+      </ul>
+      <button  style="background:#2e7d32; color:white; border:none; padding:10px 20px; border-radius:5px; cursor:pointer;">
+        Add to cart
+    </button>
+    </div>
+    
+    <div class="tour-card">
+      <h3><u>Harvest Experience Tour</u></h3>
+      <ul>
+        <li>Adults: Harvesting, cooking demo</li>
+        <li>Children: Fruit picking, crafts</li>
+      </ul>
+      <p style="font-weight:bold" class="price">R350 per adult | R220 per child</p>
+      <ul>
+      <img src="picking.jpeg">
+      </ul>
+      <button  style="background:#2e7d32; color:white; border:none; padding:10px 20px; border-radius:5px; cursor:pointer;">
+         Add to cart
+    </button>
+    </div>
+    
+    <div class="tour-card">
+      <h3><u>Weekend Adventure Tour</u></h3>
+      <ul>
+        <li>Adults: Wine/cheese tasting, hike</li>
+        <li>Children: treasure hunt</li>
+      </ul>
+      <p style="font-weight:bold" class="price">R400 per adult | R250 per child</p>
+      <ul>
+      <img src="hiking.jpeg">
+      </ul>
+      <button  style="background:#2e7d32; color:white; border:none; padding:10px 20px; border-radius:5px; cursor:pointer;">
+       Add to cart
+      </button>
+    </div>
+  </div>
+</section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 EcoHarvest Organic Farm & Market | Designed by Agobokoe Dingaan</p>
+    </footer>
+</body>
+</html>
